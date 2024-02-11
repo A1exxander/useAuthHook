@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function useAuth() {
 
-  const [JWT, setJWT] = useState(localStorage.getItem("auth")); // Set initial state to use the local storage's auth value
+  const [JWT, setJWT] = useState(localStorage.getItem("auth")); // Set initial state to use local storage auth value
 
   const updateJWT = (newJWT) => { // Update our JWT by updating local storage, NOT by calling the setState hook!
     localStorage.setItem("auth", newJWT);
